@@ -10,7 +10,8 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
 1. Java 11 should be installed  
 
 ## Install Java 11
-   '''sh
+
+   ```sh
    yum install java-11*
    find /usr/lib/jvm/* | grep jre
    nano ~/.bash_profile
@@ -21,8 +22,7 @@ Jenkins is a self-contained Java-based program, ready to run out-of-the-box, wit
    M2=/opt/maven/bin
 
    PATH=$PATH:$HOME/bin:$JAVA_HOME:$M2:$M2_HOME
-
-   '''
+   ```
 
 ## Install Jenkins
  You can install jenkins using the rpm or by setting up the repo. We will set up the repo so that we can update it easily in the future.
