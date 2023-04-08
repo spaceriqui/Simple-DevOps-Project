@@ -3,6 +3,19 @@
 - Complete DevOps Project course on [Udemy](https://www.udemy.com/course/valaxy-devops/?referralCode=8147A5CF4C8C7D9E253F)  
 ### Pre-requisites
 1. EC2 instance with Java 11
+
+### Install Java 11 (review)
+
+   ```sh
+   yum install java-11*
+   find /usr/lib/jvm/* | grep jre
+   nano ~/.bash_profile
+   
+   # User specific environment and startup programs
+   JAVA_HOME=/usr/lib/jvm/jre-11-openjdk
+
+   PATH=$PATH:$HOME/bin:$JAVA_HOME
+   ```
 ### Install Apache Tomcat
 1. Download tomcat packages from  https://tomcat.apache.org/download-80.cgi onto /opt on EC2 instance
    > Note: Make sure you change `<version>` with the tomcat version which you download. 
