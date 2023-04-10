@@ -35,10 +35,24 @@ Ansible is an open-source automation platform. It is very, very simple to set up
    sudo su - ansadmin
    ssh-keygen
    ```
+
+1. EDIT - ADD ALL HOST NAMES TO THE /etc/ansible/hosts file.
+   ```sh 
+   nano /etc/ansible/hosts
+   add the server ip address and 'localhost'
+   ```
+
+1. make sure remotes can log in remotely by changenging the sshd config file, changing PubkeyAuthentication yes
+   ```sh 
+   sudo nano /etc/ssh/sshd_config
+   ```
+
+
 1. Copy keys onto all ansible managed hosts (on Control node)
    ```sh 
    ssh-copy-id ansadmin@<target-server>
    ```
+   
 
 1. Ansible server used to create images and store on docker registry. Hence install docker, start docker services and add ansadmin to the docker group. 
    ```sh
